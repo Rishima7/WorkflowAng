@@ -3,16 +3,17 @@ on: push
 jobs:
  test:
   runs-on: ubantu-latest
-   steps:
-  uses: action/checkout@v3
-  -name: Install node js
-  uses: action/setup-node@v3
-  -name: install dependency
-  run:   npm install -g @angular/cli
- -name: second dependency
-  run: npm install
-  name: test run
-  run: ng test
+  steps:
+    - name: Check out code
+      uses: action/checkout@v3
+    - name: Install node js
+      uses: action/setup-node@v3
+    - name: install dependency
+      run:   npm install -g @angular/cli
+    - name: second dependency
+      run: npm install
+    - name: test run
+      run: ng test
   
   
   
