@@ -1,5 +1,5 @@
 name: Workflow1
-on: push
+on: [push, workflow_dispatch]
 jobs:
  test:
   runs-on: ubantu-latest
